@@ -9,8 +9,10 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "test": "jest",
+    "genKeypair": "node lib/genKeypair.js",
     "format": "prettier --write .",
-    "db:create" : "sequelize db:create"
+    "db:create": "sequelize db:create",
+    "db:migrate": "sequelize db:migrate"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
