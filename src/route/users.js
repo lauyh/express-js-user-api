@@ -1,8 +1,10 @@
 const express = require("express");
 const { body, validationResult } = require("express-validator");
+
 const { generate, compare } = require("../../lib/passwordHelper");
 const { issueJWT, verifyAccessToken } = require("../../lib/jwtHelper");
 const { sequelize } = require("../../models");
+const {notEmpty, validateGender, validateStatus} = require("../../lib/validation");
 const router = express.Router();
 
 router.post(
